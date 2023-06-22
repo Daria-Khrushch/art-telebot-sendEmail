@@ -34,7 +34,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-between flex-wrap p-2 lg:hidden shadow-lg shadow-slate-20">
         <div className="flex items-center flex-shrink-0 mr-6">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold">TeleBot.tg</h1>
+            <h1 className="text-2xl font-bold">Telegram.ads</h1>
            
           </div>
         </div>
