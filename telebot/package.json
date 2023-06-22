@@ -1,0 +1,33 @@
+{
+  "name": "art-telebot-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "prisma generate && next start",
+    "export": "next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.15.0",
+    "autoprefixer": "10.4.14",
+    "bcrypt": "^5.1.0",
+    "moment": "^2.29.4",
+    "next": "13.4.3",
+    "next-auth": "^4.22.1",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-select": "^5.7.3",
+    "react-spinners": "^0.13.8",
+    "swr": "^2.1.5",
+    "tailwindcss": "^3.3.2",
+    "nodemailer": "^6.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "prisma": "^4.15.0"
+  }
+}

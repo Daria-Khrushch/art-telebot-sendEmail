@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model buyer {
+  id             Int      @id @default(autoincrement())
+  buyer_name     String   @db.TinyText
+  buyer_telegram String   @db.VarChar(255)
+  ads_format     String   @db.TinyText
+  ads_quantity   Int      @db.UnsignedInt
+  ads_sum        Int      @db.UnsignedInt
+  channel_name   String   @db.TinyText
+  created_at     DateTime @default(now()) @db.Timestamp(0)
+  channel_id     Int      @db.UnsignedInt
+}
+
+model channel {
+  id          Int      @id @default(autoincrement())
+  avatar      String   @db.VarChar(255)
+  name        String   @db.VarChar(255)
+  theme       String   @db.TinyText
+  language    String   @db.TinyText
+  description String   @db.VarChar(255)
+  subscribers Int      @db.UnsignedInt
+  views       Int      @db.UnsignedInt
+  cpv         Int      @db.UnsignedInt
+  type        String   @db.TinyText
+  geolocation String   @db.TinyText
+  created_at  DateTime @default(now()) @db.Timestamp(0)
+  updated_at  DateTime @default(now()) @db.Timestamp(0)
+  is_shown    Int      @default(1) @db.TinyInt
+}
+
+model user {
+  id         Int      @id @default(autoincrement())
+  email      String   @db.TinyText
+  role       String   @db.TinyText
+  password   String   @db.VarChar(255)
+  name       String   @db.TinyText
+  created_at DateTime @default(now()) @db.Timestamp(0)
+  updated_at DateTime @default(now()) @db.Timestamp(0)
+}
