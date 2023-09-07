@@ -34,39 +34,39 @@ const RemovedCard = ({ channel }) => {
     // Проверка наличия обязательных полей
     const validationErrors = {};
     if (!channelName) {
-      validationErrors.channelName = "Пожалуйста, введите название канала";
+      validationErrors.channelName = "Please enter the channel name";
     }
     if (!ava) {
-      validationErrors.ava = "Пожалуйста, введите URL картинки";
+      validationErrors.ava = "Please enter the image URL";
     }
     if (!theme) {
-      validationErrors.theme = "Пожалуйста, введите тему канала";
+      validationErrors.theme = "Please enter the channel topic";
     }
     if (!geo) {
-      validationErrors.geo = "Пожалуйста, выберите геолокацию канала";
+      validationErrors.geo = "Please enter the channel geo";
     }
     if (!type) {
-      validationErrors.type = "Пожалуйста, выберите тип канала";
+      validationErrors.type = "Please enter the channel type";
     }
     if (geo === "Выберите геолокацию канала") {
-      validationErrors.geo = "Пожалуйста, выберите геолокацию канала";
+      validationErrors.geo = "Please enter the channel geo";
     }
 
-    if (type === "Выберите тип канала") {
-      validationErrors.type = "Пожалуйста, выберите тип канала";
+    if (type === "Выберите Channel type") {
+      validationErrors.type = "Please enter the channel type";
     }
     if (!language) {
-      validationErrors.language = "Пожалуйста, введите язык канала";
+      validationErrors.language = "Please enter the language";
     }
     if (theme === "Введите тему канала") {
-      validationErrors.theme = "Пожалуйста, введите тему канала";
+      validationErrors.theme = "Please enter the channel topic";
     }
 
-    if (language === "Введите язык канала") {
-      validationErrors.language = "Пожалуйста, введите язык канала";
+    if (language === "Введите Language") {
+      validationErrors.language = "Please enter the language";
     }
     if (!description) {
-      validationErrors.description = "Пожалуйста, введите описание канала";
+      validationErrors.description = "Please enter channel description ";
     }
 
     if (Object.keys(validationErrors).length > 0) {
@@ -153,19 +153,19 @@ const RemovedCard = ({ channel }) => {
 
           <div className="meta border-slate-300 border-r lg:justify-between">
             <div className="lg:flex flex-col">
-              {channel.type === "группа" ? <h3 className="lg:mr-2 lg:font-semibold">Подписчики</h3> : <h3 className="lg:mr-2 lg:font-semibold">Участники</h3>}
+              {channel.type === "группа" ? <h3 className="lg:mr-2 lg:font-semibold">Subscribers</h3> : <h3 className="lg:mr-2 lg:font-semibold">Subscribers</h3>}
               <span>{channel.subscribers}</span>
             </div>
 
             <div className="lg:flex flex-col">
-              <h3 className="lg:mr-2 lg:font-semibold">Просмотры</h3>
+              <h3 className="lg:mr-2 lg:font-semibold">Views</h3>
               <span>{channel.views}</span>
             </div>
           </div>
 
           <div className="setting border-slate-300 border-r">
             <div className="mb-2">
-              <span className="mr-1">Формат</span>
+              <span className="mr-1">Format</span>
               <select
                 name=""
                 id=""
@@ -182,7 +182,7 @@ const RemovedCard = ({ channel }) => {
               </select>
             </div>
             <div>
-              <span className="mr-1">Количество</span>
+              <span className="mr-1">Quantity</span>
               <input
                 type="number"
                 name=""
@@ -223,7 +223,7 @@ const RemovedCard = ({ channel }) => {
           className="modal-form text-xs"
         >
           <label className="modal-label">
-            Название:
+            Channel name:
             <input
               className="modal-input"
               type="text"
@@ -236,7 +236,7 @@ const RemovedCard = ({ channel }) => {
           </label>
 
           <label className="modal-label">
-            Аватар:
+            Avatar:
             <input
               className="modal-input"
               type="text"
@@ -247,7 +247,7 @@ const RemovedCard = ({ channel }) => {
           </label>
 
           <label className="modal-label">
-            Тип канала:
+            Channel type:
             <div className="flex">
               <input
                 className="modal-input"
@@ -258,7 +258,7 @@ const RemovedCard = ({ channel }) => {
                 className="modal-input "
                 onChange={(e) => setType(e.target.value)}
               >
-                <option value="Выберите тип канала">Свой вариант</option>
+                <option value="Выберите Channel type">other</option>
                 {types && types.length > 0
                   ? types.map((item) => (
                       <option key={Math.random()} className="" value={item}>
@@ -271,7 +271,7 @@ const RemovedCard = ({ channel }) => {
             {errors.type && <span className="error">{errors.type}</span>}
           </label>
           <label className="modal-label">
-            Гео канала:
+            Channel geo:
             <div className="flex">
               <input
                 className="modal-input"
@@ -282,7 +282,7 @@ const RemovedCard = ({ channel }) => {
                 className="modal-input "
                 onChange={(e) => setGeo(e.target.value)}
               >
-                <option value="Выберите геолокацию канала">Свой вариант</option>
+                <option value="Выберите геолокацию канала">other</option>
                 {geos && geos.length > 0
                   ? geos.map((item) => (
                       <option key={Math.random()} className="" value={item}>
@@ -296,7 +296,7 @@ const RemovedCard = ({ channel }) => {
           </label>
 
           <label className="modal-label">
-            Тема:
+            Topic:
             <div className="flex">
               <input
                 className="modal-input"
@@ -308,7 +308,7 @@ const RemovedCard = ({ channel }) => {
                 className="modal-input "
                 onChange={(e) => setTheme(e.target.value)}
               >
-                <option value="Введите тему канала">Свой вариант</option>
+                <option value="Введите тему канала">other</option>
                 {themes && themes.length > 0
                   ? themes.map((item) => (
                       <option key={item} className="" value={item}>
@@ -322,7 +322,7 @@ const RemovedCard = ({ channel }) => {
           </label>
 
           <label className="modal-label">
-            Язык канала:
+            Language:
             <div className="flex">
               <input
                 className="modal-input"
@@ -333,7 +333,7 @@ const RemovedCard = ({ channel }) => {
                 className="modal-input "
                 onChange={(e) => setLanguage(e.target.value)}
               >
-                <option value="Введите язык канала">Свой вариант</option>
+                <option value="Введите Language">other</option>
                 {lang && lang.length > 0
                   ? lang.map((item) => (
                       <option key={item} className="" value={item}>
@@ -349,7 +349,7 @@ const RemovedCard = ({ channel }) => {
           </label>
 
           <label className="modal-label">
-            Количество просмотров:
+            Number of views:
             <input
               className="modal-input"
               type="number"
@@ -359,7 +359,7 @@ const RemovedCard = ({ channel }) => {
             ></input>
           </label>
           <label className="modal-label">
-            Колличество подписчиков:
+            Number of subscribers:
             <input
               className="modal-input"
               type="number"
@@ -380,7 +380,7 @@ const RemovedCard = ({ channel }) => {
           </label>
 
           <label className="modal-label">
-            Описание:
+            Description:
             <textarea
               className="modal-textarea"
               value={description}
@@ -393,12 +393,12 @@ const RemovedCard = ({ channel }) => {
               className="modal-input"
               onChange={(event) => handleShow(event)}
             >
-              <option value="0">Скрыть</option>
-              <option value="1">Показать</option>
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
             </select>
           </label>
 
-          <button type="submit">Отправить</button>
+          <button type="submit">Send</button>
         </form>
       </Modal>
     </>

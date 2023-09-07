@@ -22,11 +22,11 @@ const Card = ({ channel }) => {
     // Проверка наличия обязательных полей
     const validationErrors = {};
     if (!buyer) {
-      validationErrors.buyer = "Пожалуйста, введите ваше имя";
+      validationErrors.buyer = "Please enter your name";
     }
 
     if (!telegram) {
-      validationErrors.buyer = "Пожалуйста, введите ваш логин в Telegram";
+      validationErrors.buyer = "Please enter your Telegram login";
     }
 
     if (Object.keys(validationErrors).length > 0) {
@@ -125,23 +125,23 @@ const Card = ({ channel }) => {
           <div className="meta border-slate-300 border-r lg:justify-between">
             <div className="lg:flex flex-col">
               {channel.type === "группа" ? (
-                <h3 className="lg:mr-2 lg:font-semibold">Подписчики</h3>
+                <h3 className="lg:mr-2 lg:font-semibold">Subscribers</h3>
               ) : (
-                <h3 className="lg:mr-2 lg:font-semibold">Участники</h3>
+                <h3 className="lg:mr-2 lg:font-semibold">Subscribers</h3>
               )}
 
               <span>{channel.subscribers}</span>
             </div>
 
             <div className="lg:flex flex-col">
-              <h3 className="lg:mr-2 lg:font-semibold">Просмотры</h3>
+              <h3 className="lg:mr-2 lg:font-semibold">Views</h3>
               <span>{channel.views}</span>
             </div>
           </div>
 
           <div className="setting border-slate-300 border-r">
             <div className="mb-2">
-              <span className="mr-1">Формат</span>
+              <span className="mr-1">Format</span>
               <select
                 name=""
                 id=""
@@ -158,7 +158,7 @@ const Card = ({ channel }) => {
               </select>
             </div>
             <div>
-              <span className="mr-1">Количество</span>
+              <span className="mr-1">Quantity</span>
               <input
                 type="number"
                 name=""
@@ -194,8 +194,7 @@ const Card = ({ channel }) => {
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <h3 className="modal-form title-form">
-          Спасибо за ваш интерес к рекламе в нашем телеграм-канале! Пожалуйста,
-          оставьте свои данные ниже, и мы свяжемся с вами в ближайшее время:
+         Please leave your data below and we will contact you as soon as possible:
         </h3>
         <form
           id="buyer-modal-form "
@@ -203,7 +202,7 @@ const Card = ({ channel }) => {
           className="modal-form pb-4"
         >
           <label className="modal-label">
-            Ваше имя:
+            Name:
             <input
               className="modal-input"
               type="text"
@@ -214,7 +213,7 @@ const Card = ({ channel }) => {
           </label>
 
           <label className="modal-label">
-            Ваш логин в Telegram:
+            Your Telegram login:
             <input
               className="modal-input mb-5"
               type="tel"
@@ -227,7 +226,7 @@ const Card = ({ channel }) => {
           </label>
 
           <button type="submit">
-            Отправить
+            Send
           </button>
         </form>
       </Modal>

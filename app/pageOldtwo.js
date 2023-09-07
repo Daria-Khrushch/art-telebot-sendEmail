@@ -129,19 +129,19 @@ const Home = () => {
       />
       <div className="content">
         <div className="info">
-          <h2>Каналы</h2>
+          <h2>Channels</h2>
           <div className="filtrs">
             {/* <span className="filtrs-option">Рейтинг</span> */}
             <span className="filtrs-option" onClick={handleSortByView}>
-              Просмотры
+              Views
               {isViewSorted ? (isViewSortedDesc ? "🔽" : "🔼") : ""}
             </span>{" "}
             <span className="filtrs-option" onClick={handleSortBySubs}>
-              Подписчики
+              Subscribers
               {isSubSorted ? (isSubSortedDesc ? "🔽" : "🔼") : ""}
             </span>
             <span className="filtrs-option" onClick={handleSortByCpv}>
-              Стоимость
+              Price
               {isCpvSorted ? (isCpvSortedDesc ? "🔽" : "🔼") : ""}
             </span>
           </div>

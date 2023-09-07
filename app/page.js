@@ -28,19 +28,19 @@ const Home = () => {
 
       <div className="px-3 content">
         <div className="info lg:flex lg:mb-7 lg:justify-between">
-          <h2 className="my-3 text-center font-semibold text-lg lg:text-start lg:my-0 lg:mr-10 lg:text-2xl">Каналы</h2>
+          <h2 className="my-3 text-center font-semibold text-lg lg:text-start lg:my-0 lg:mr-10 lg:text-2xl">Channels</h2>
           <div className="mb-4 text-center font-medium grid grid-cols-3 gap-4  text-sm  lg:text-xl lg:block lg:text-start lg:mb-0">
     
             <span className="filtrs-option lg:mr-10 cursor-pointer" onClick={handleSortBySubs}>
-              Подписчики
+              Subscribers
               {isSubSorted ? (isSubSortedDesc ? "🔽" : "🔼") : ""}
             </span>
             <span className="filtrs-option lg:mr-10 cursor-pointer" onClick={handleSortByView}>
-              Просмотры
+              Views
               {isViewSorted ? (isViewSortedDesc ? "🔽" : "🔼") : ""}
             </span>{" "}
             <span className="filtrs-option lg:mr-10 cursor-pointer" onClick={handleSortByCpv}>
-              Стоимость
+              Price
               {isCpvSorted ? (isCpvSortedDesc ? "🔽" : "🔼") : ""}
             </span>
           </div>

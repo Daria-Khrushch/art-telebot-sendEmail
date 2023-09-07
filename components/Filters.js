@@ -10,12 +10,12 @@ export default function Filters() {
 
   return (
     <div className="filters lg:text-2xl">
-      <h2 className="hidden lg:block lg:mb-7 font-semibold">Фильтры</h2>
+      <h2 className="hidden lg:block lg:mb-7 font-semibold">Filters</h2>
       <form id="search" onSubmit={onSearch} className="relative">
         <input
           value={searchQuery || ""}
           onChange={(event) => setSearchQuery(event.target.value)}
-          placeholder="Поиск..."
+          placeholder="Search..."
           className="focus:outline-none placeholder:text-slate-800 overflow-hidden my-2 p-1 w-full border-solid border-2 border-slate-300 rounded-md"
         />
         <button className="filtres-btn hidden absolute inset-y-0 right-0 lg:flex items-center pr-2" onSubmit={onSearch}>
@@ -38,10 +38,10 @@ export default function Filters() {
         </button>
       </form>
       <div className="">
-        <p className="hidden lg:block">Тематика:</p>
+        <p className="hidden lg:block">Subjects:</p>
         <select className="focus:outline-none my-2 relative p-1 w-full border-solid border-2 border-slate-300 rounded-md" onChange={(event) =>  onThemeFilter(event)}>
           <option className="" value="">
-            Все
+            All
           </option>
           {themes && themes.length > 0
             ? themes.map((item) => (
@@ -53,10 +53,10 @@ export default function Filters() {
         </select>
       </div>
       <div className="">
-        <p className=" hidden lg:block">Язык:</p>
+        <p className=" hidden lg:block">Language:</p>
         <select className="focus:outline-none my-2 relative p-1 w-full border-solid border-2 border-slate-300 rounded-md" onChange={(event) => onLangFilter(event)}>
           <option className="filters-option" value="">
-            Все
+            All
           </option>
           {lang && lang.length > 0
             ? lang.map((items) => (
@@ -69,10 +69,10 @@ export default function Filters() {
       </div>
 
       <div className="">
-        <p className=" hidden lg:block">Геолокация:</p>
+        <p className=" hidden lg:block">Geolocation:</p>
         <select className="focus:outline-none my-2 relative p-1 w-full border-solid border-2 border-slate-300 rounded-md" onChange={(event) => onGeoFilter(event)}>
           <option className="filters-option" value="">
-            Все
+            All
           </option>
           {geos && geos.length > 0
             ? geos.map((items) => (
@@ -85,10 +85,10 @@ export default function Filters() {
       </div>
 
       <div className="">
-        <p className=" hidden lg:block">Тип:</p>
+        <p className=" hidden lg:block">Type:</p>
         <select className="focus:outline-none my-2 relative p-1 w-full border-solid border-2 border-slate-300 rounded-md" onChange={(event) => onTypeFilter(event)}>
           <option className="filters-option" value="">
-            Все
+            All
           </option>
           {types && types.length > 0
             ? types.map((items) => (
